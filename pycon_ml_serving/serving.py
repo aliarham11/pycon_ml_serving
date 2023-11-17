@@ -2,7 +2,7 @@ import yaml
 import falcon
 import os
 import logging
-from pycon_ml_serving.abstract.generic_resources import GenericFalconResources
+from abstract.generic_resources import GenericFalconResources
 
 def import_handler_from_string(handler_path: str):
     """
