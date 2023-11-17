@@ -6,7 +6,7 @@ setuptools.setup(
     author="Yoga Aliarham",
     author_email="aliarham.skom@gmail.com",
     description="A package that use for serving inference machine learning models",
-    long_description=long_description,
+    long_description="A short description should suffice",
     long_description_content_type="text/markdown",
     url="https://github.com/aliarham11/pycon_ml_sercing",
     packages=setuptools.find_packages(),
