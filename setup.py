@@ -8,7 +8,7 @@ setuptools.setup(
     description="A package that use for serving inference machine learning models",
     long_description="A short description should suffice",
     long_description_content_type="text/markdown",
-    url="https://github.com/aliarham11/pycon_ml_sercing",
+    url="https://github.com/aliarham11/pycon_ml_serving",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
