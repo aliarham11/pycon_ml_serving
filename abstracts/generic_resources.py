@@ -1,0 +1,21 @@
+
+
+class GenericFalconResources:
+
+    def __init__(self, http_function_map: dict):
+        """
+        http_function_map will define which function to call 
+        for a particular HTTP Method
+        sample: 
+            http_function_map = {
+                "POST": <predictor.iris.IrisPredictor.predict>
+                "GET": <predictor.iris.IrisPredictor.get_historical_data>
+            }
+        """
+        self.http_function_map = http_function_map
+
+    def on_post(self, req, resp):
+        _input = req.media['input']
+        prediction = self.http_function_map["POST"](_input)
+        resp.media = {'prediction': prediction}
+    
