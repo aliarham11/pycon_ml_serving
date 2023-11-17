@@ -1,3 +1,0 @@
-#!/bin/bash
-
-gunicorn -b 0.0.0.0:5005 "serving:create_falcon_app()"
