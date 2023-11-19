@@ -1,4 +1,5 @@
 import json
+import falcon
 
 class GenericFalconResources:
 
@@ -17,5 +18,12 @@ class GenericFalconResources:
     def on_post(self, req, resp):
         _body =  json.loads(req.stream.read().decode('utf-8'))
         prediction = self.http_function_map["POST"](_body)
-        resp.media = {'prediction': prediction}
+        json_data = json.dumps(prediction)
+
+        # Set response headers
+        resp.content_type = falcon.MEDIA_JSON
+        resp.status = falcon.HTTP_200
+
+        # Set response body
+        resp.body = json_data
     
