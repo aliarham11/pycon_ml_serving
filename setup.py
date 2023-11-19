@@ -15,7 +15,7 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    scripts=["pycon_ml_serving/bin/pycon_serving"],
+    scripts=["pycon_ml_serving/bin/pycon-serving"],
     install_requires=[
         "falcon==3.1.1",
         "gunicorn==20.1.0",
