@@ -15,7 +15,7 @@ class GenericFalconResources:
         self.http_function_map = http_function_map
 
     def on_post(self, req, resp):
-        _body = req.media
+        _body = req.context.body
         prediction = self.http_function_map["POST"](_body)
         resp.media = {'prediction': prediction}
     
