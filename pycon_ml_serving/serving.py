@@ -93,15 +93,16 @@ def generate_endpoint_groups(apis: list, config: dict):
 
 def create_falcon_app():
     """
-    TO DO
+    Generate falcon resources from serving config 
+    by instantiating an abstract object template for each registered resources
 
     Parameters
     ----------
-    config (Dict)
+    None
 
     Returns
     -------
-    out (Dict[str, Resource])
+    out Falcon.app
     """
     # setting up logging level
     logging.getLogger().setLevel(logging.INFO)
